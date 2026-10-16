@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+artifacts/
+TestResults/
+**/TestResults/
+.vs/
+.idea/
+*.user
+*.suo
+*.log
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+*.pfx
+*.p12
+*.pem
