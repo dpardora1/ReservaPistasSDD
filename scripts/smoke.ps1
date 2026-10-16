@@ -109,6 +109,11 @@ finally {
             $process.Dispose()
         }
     }
+    catch {
+        $report.passed = $false
+        $report.error = "Cleanup failed: $($_.Exception.Message)"
+        throw
+    }
     finally {
         $client.Dispose()
         $report | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $OutputDirectory 'smoke.json') -Encoding utf8
